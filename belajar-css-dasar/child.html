@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child</title>
+    <style>
+        /* p yang anak langsung dari div */
+        div > p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <article>
+            <p>Ini tidak dipilih karena anak dari article </p>
+        </article>
+        <p>Ini dipilih, anak langsung dari div</p>
+    </div>
+    <p>Ini tidak dipilih karena di luar div</p>
+</body>
+</html>
