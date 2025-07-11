@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Items</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: [cline1] 100px [cline2] auto [cline3] 100px [cline4];
+            grid-template-rows: [rline1] 50px [rline2] auto [rline3] 100px [rline4];
+        }
+        .header {
+            background-color: aqua;
+            grid-column-start: cline1;
+            grid-column-end: cline4;
+            grid-row-start: rline1;
+            grid-row-end: rline2;
+        }
+
+        .content {
+            background-color: bisque;
+            grid-column-start: cline2;
+            grid-column-end: cline3;
+            grid-row-start: rline2;
+            grid-row-end: rline3;
+        }
+
+        .footer {
+            background-color: aqua;
+            grid-column-start: cline1;
+            grid-column-end: cline4;
+            grid-row-start: rline3;
+            grid-row-end: rline4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Selamat Datang di Web Programmer Zaman Now
+        </div>
+        <div class="content">
+            <h1>Programmer Zaman Now</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi magnam placeat ullam. Vero perspiciatis officiis, minus aliquam perferendis, nobis, sequi nihil magni autem eligendi repellat. Recusandae, quo a quia voluptate quaerat possimus quae sint, quibusdam amet dolorum impedit molestiae, veritatis debitis. Id voluptates illum, cupiditate magnam libero dignissimos dolorum perspiciatis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptatibus laudantium impedit, libero mollitia numquam aspernatur! Debitis voluptate quas quo deserunt porro doloribus, cupiditate corrupti, maiores ipsa quae perspiciatis labore repellendus alias. Veniam laborum nemo nam! Quis repudiandae placeat molestias similique odio repellat architecto, beatae odit ducimus, iste assumenda nihil optio eligendi id rerum expedita reiciendis impedit, ipsa ab? Aut.</p>
+        </div>
+        <div class="footer">
+            Develop with Love by Programmer Zaman Now
+        </div>
+    </div>
+</body>
+</html>
