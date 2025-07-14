@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Field</title>
+</head>
+<body>
+<script>
+
+    // Public Class
+    class Customer {
+        firstName;
+        lastName;
+        balance = 0;
+
+        constructor(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+    }
+
+    const ahmad = new Customer("Ahmad", "Ilham");
+    console.info(ahmad);
+
+    // Private Class (#)
+    class Counter {
+        #counter = 0;
+
+        increment() {
+            this.#counter++;
+        }
+
+        decrement() {
+            this.#counter--;
+        }
+
+        get() {
+            return this.#counter;
+        }
+    }
+
+    const counter = new Counter();
+
+    counter.increment()
+    counter.increment()
+    counter.increment()
+
+    console.info(counter.get())
+
+    // Private Methode
+    class Person {
+        say(name) {
+            if (name) {
+                this.#sayWithName(name);
+            } else {
+                this.#sayWithoutName()
+            }
+        }
+        #sayWithName(name) {
+            console.info(`Hello ${name}`)
+        }
+
+         #sayWithoutName() {
+            console.info(`Hello`)
+        }
+    }
+
+    const ham = new Person();
+    ham.say("Ilhaaaamm")
+
+</script>
+</body>
+</html>

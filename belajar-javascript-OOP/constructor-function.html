@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Function</title>
+</head>
+<body>
+<script>
+    {
+        function Person() {
+        this.firstName = "" // Property
+        this.lastName = ""  // Property
+        this.sayHello = function (name) {  // Methode (sayHello) 
+            console.log(`Hello ${name}, my name is ${this.firstName}`)
+        }
+        }
+
+        const ahmad = new Person();
+        ahmad.firstName = "Ahmad";
+        ahmad.lastName = "Habibi";
+        ahmad.sayHello("Emma")
+
+        const ilham = new Person();
+        ilham.firstName = "Ilham";
+        ilham.lastName = "Habibi"
+        ilham.sayHello("Emma")
+
+        console.log(ahmad)
+        console.log(ilham)
+    }
+
+        {
+        function Person(firstName, lastName) { // Contructor Function w/ Parameter
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sayHello = function (name) {  
+            console.log(`Hello ${name}, my name is ${this.firstName}`)
+        }
+        }
+
+        const ahmad = new Person("Ahmad", "Habibi");
+        ahmad.sayHello("Emma")
+
+        const ilham = new Person("Ilham", "Habibi");
+        ilham.sayHello("Emma")
+
+        console.log(ahmad)
+        console.log(ilham)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter dan Setter di Class</title>
+</head>
+<body>
+<script>
+    class Person {
+        constructor(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName
+        }
+
+        get fullname() {
+            return `${this.firstName} ${this.lastName}`
+        }
+
+        set fullname(value) {
+            const result = value.split(" ");
+            this.firstName = result[0]
+            this.lastName = result[1]
+        }
+    }
+
+    const ahmad = new Person("Ahmad", "Ilham")
+    console.info(ahmad)
+    console.info(ahmad.fullname)
+</script>
+</body>
+</html>
