@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Logika di Non Boolean</title>
+</head>
+<body>
+<script>
+    // OR => mengambil nilai pertama yang truthy dari kiri-kanan
+    console.info("hello" || '') // hello
+    console.info("" || []) // []
+    console.info("0" || "NOL") // "0"
+    console.info(0 || "NOL") // NOL
+    console.info(null || "NULL") // NULL
+    console.info(undefined || "UNDEFINED") // UNDEFINED
+
+    // AND => mengambil nilai pertama yang falsy dari kiri-kanan
+    console.info("hello" && '') // ""
+    console.info("" && []) // ""
+    console.info("0" && "NOL") // "NOL"
+    console.info(0 && "NOL") // 0
+    console.info(null && "NULL") // null
+    console.info(undefined && "UNDEFINED") // undefined
+</script>
+</body>
+</html>

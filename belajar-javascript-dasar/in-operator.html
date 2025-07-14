@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Operator</title>
+</head>
+<body>
+<script>
+    const person = {
+        firstName: "Ahmad",
+        middleName: null,
+        lastName: "Habibi"
+    }
+
+    const result = "firstName" in person // true
+    document.writeln(`<p>${result}</p>`);
+
+    const result1 = "middleName" in person // true meski ilainya null
+    document.writeln(`<p>${result1}</p>`)
+</script>
+</body>
+</html>

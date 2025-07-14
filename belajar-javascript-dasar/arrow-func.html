@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+<script>
+    // Arrow Function
+    // const sayHello = (name) => {
+    //     const say = `Hello ${name}`;
+    //     console.info(say);
+    // }
+
+    // sayHello("Ahmad")
+
+    // // Arrow Function tanpa Block
+    // const sayHello = (name) => console.info(`Hello ${name}`)
+    // sayHello("Ilham")
+
+    // // Arrow Function Return Value
+    // const sum = (x, y) => x + y;
+    // console.info(sum(25, 25));
+
+    // // Arrow Function Tanpa Kiring Parameter
+    // const sayHay = name => console.info(`Hay ${name}`)
+    // sayHay("Habibi")
+
+    // // Arrow Function sebagai Parameter
+    // function giveMeName(callback) {
+    //     callback("Emma");
+    // }
+
+    // giveMeName((name) => console.info(`Hello ${name}`))
+
+    // Arrow Function di Object Method
+    const person = {
+        nama : "Ahmad",
+        sayHello: (name) => {
+            console.info(this) // Window
+            console.info(`Hello ${name}, My name is ${this.nama}`)
+        }
+    }
+
+    person.sayHello("Habibi")
+</script>   
+</body>
+</html>

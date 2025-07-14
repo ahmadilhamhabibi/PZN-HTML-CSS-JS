@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+<script>
+    // global scope
+    let counter = 0;
+
+    function hitMe() {
+        // local scope function hitMe
+        counter++; // we can access global scope
+    }
+
+    hitMe()
+    hitMe()
+
+    document.writeln(`${counter}</br>`) // 2 karena func hitMe dipanggil dua kali
+
+    // // Local scope
+    // function first() {
+    //     let firstVar = "First"; // Local Scope milik first()
+    // }
+
+    // function second() {
+    //     let secondVar = "Second"; // Local Scope milik second()
+    // }
+
+    // first()
+    // second()
+
+    // console.info(firstVar); // Error, karena local scope, hanya bisa diakses oleh first() 
+    // console.info(secondVar);
+
+    // Nested Function Scope
+    function first() {
+        let firstVar = "First";
+        function second() {
+            console.info(firstVar) // bisa diakses 
+        }
+        second();
+    }
+
+    first()
+</script>
+</body>
+</html>

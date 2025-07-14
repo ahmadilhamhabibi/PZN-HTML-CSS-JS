@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+<script>
+    // Mengambil data dari array
+    // const names = ["Ahmad", "Ilham", "Habibi"]
+    // const firstName = names[0]
+    // const middleName = names[1]
+    // const lastName = names[2]
+
+    // console.info(firstName);
+    // console.info(middleName);
+    // console.info(lastName);
+
+
+    // Destructuring Array
+    // const names = ["Ahmad", "Ilham", "Habibi", "Emma", "Lemuuu"]
+    // const [firstName, middleName, lastName, ...other] = names;
+
+    // console.info(firstName);
+    // console.info(middleName);
+    // console.info(lastName);
+    // console.info(other)
+
+    // Destructuring Object
+    const person = {
+        firstName: "Ahmad",
+        lastName: "Habibi",
+        address: {
+            street: "Jalan-jalan",
+            city: "sby",
+            country: "INA"
+        },
+        hobby: "Makan-makan",
+        channel: "Gak Punya"
+    };
+
+    // const {firstName, lastName, address, ...others} = person;
+    // console.info(firstName);
+    // console.info(lastName);
+    // console.info(address);
+    // console.info(others);
+
+
+    // Destructuring Nested
+    // const {firstName, lastName, address: {country, city, street}, ...others} = person;
+    // console.info(firstName);
+    // console.info(lastName);
+    // console.info(country);
+    // console.info(city);
+    // console.info(street);
+    // console.info(others);
+
+
+    // Destructuring di Function Paraneter
+    {
+        function displayPerson({firstName, middleName, lastName}) {
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName)
+        }
+        const person = {
+            firstName: "Ahmad",
+            middleName: "Ilham",
+            lastName: "Habibi"
+        };
+
+        displayPerson(person)
+    }
+
+    {
+        function sum([x, y]) {
+            return x + y;
+        }
+
+        console.info(sum([20, 30]))
+        console.info(sum([1, 2]))
+    }
+    
+    {
+        const names = ["Adam", "Idris", "Nuh"];
+        const [firstName, middleName, lastName = "Habibi"] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName)
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Syntax</title>
+</head>
+<body>
+<script>
+    function sum(name, ...data) {
+        let total = 0
+        for (const item of data) {
+            total += item;
+        }
+        console.info(`Total ${name} is ${total}`)
+    }
+
+    sum('pisang', 4, 5, 6, 7, 8, 9);
+    sum('mangga', 3, 3, 4, 5, 6, 8);
+    sum('salak', 9 ,8, 7, 5, 4, 7, 5);
+
+    const nilai = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10]
+    sum("test", ...nilai)
+</script>
+</body>
+</html>
