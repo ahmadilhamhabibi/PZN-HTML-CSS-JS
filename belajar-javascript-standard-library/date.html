@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body>
+<script>
+    const date1 = new Date()
+    console.info(date1);
+
+    const date2 = new Date(1995, 5, 28)
+    console.info(date2);
+
+    const date3 = new Date(1995, 5, 28, 17, 10, 15)
+    console.info(date3);
+
+
+    const timestamp = Date.now();
+    console.info(timestamp);
+
+    const dateUnix = new Date(timestamp);
+    console.info(dateUnix);
+
+    console.info(dateUnix.getTime())
+
+
+    const parseTimestamp = Date.parse("1995-12-28T17:15:10.123+07:00")
+    console.info(parseTimestamp)
+
+    const parseDate = new Date(parseTimestamp);
+    console.info(parseDate);
+
+
+    // Getter dan Setter
+    const date = new Date();
+    date.setFullYear(2024);
+
+    console.info(date.getFullYear());
+    console.info(date.getMonth());
+    console.info(date.getDate);
+    console.info(date.getHours());
+    console.info(date.getMinutes());
+    console.info(date.getSeconds());
+    console.info(date.getMilliseconds());
+    console.info(date.getTimezoneOffset());
+</script>
+</body>
+</html>

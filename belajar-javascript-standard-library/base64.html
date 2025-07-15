@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64</title>
+</head>
+<body>
+<script>
+    const ori = "Ahmad Ilham Habibi";
+
+    const encoded = btoa(ori);
+    console.info(encoded)
+
+    const decode = atob(encoded)
+    console.info(decode)
+</script>
+</body>
+</html>

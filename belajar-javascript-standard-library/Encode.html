@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encode</title>
+</head>
+<body>
+<script>
+    const value = "Ahmad&Ilham=Habibi"
+    const url = 'https://ww.doubleyou.com/?name=';
+    console.info(url);
+
+    const encoded = encodeURI(value);
+    console.info(url + encoded);
+
+    const decoded = decodeURI(encoded);
+    console.info(url + decoded)
+
+
+
+</script>
+</body>
+</html>

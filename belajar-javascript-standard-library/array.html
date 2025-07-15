@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    {
+        // array loop
+        const array = ["Ahmad", "Ilham", "Habibi"]
+
+        array.forEach(function (value, index) {
+            console.info(`${index} : ${value}`);
+        })
+
+        array.forEach((value, index) => console.info(`${index} : ${value}`));
+
+        array.forEach(value => console.info(value));
+    }
+
+    {
+        // Array Queue
+        const queue = []
+
+        queue.push("Ahmad")
+        queue.push("Ilham")
+        queue.push("Habibi")
+
+        console.info("check poin setelah push pada queue")
+
+        console.info(queue.shift())
+        console.info(queue.shift())
+        console.info(queue.shift())
+
+        console.info("check poin setelah shift pada queue")
+    }
+
+    {
+        // Array Stack
+        const stack = []
+
+        stack.push("Ahmad")
+        stack.push("Ilham")
+        stack.push("Habibi")
+
+        console.info("check poin setelah push pada stack")
+
+        console.info(stack.pop());
+        console.info(stack.pop());
+        console.info(stack.pop());
+
+        console.info("check poin setelah pop pada stack")
+    }
+
+    {
+        const source = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+
+        console.info(source.find(x => x > 3)) // berhenti di angka 4 
+        console.info(source.findIndex(x => x > 3)) // index ke-3
+        console.info(source.includes(7)) // false, tdk ada data 7
+        console.info(source.indexOf(5)) // index ke-4, yg pertama kali ketemu
+        console.info(source.lastIndexOf(5)) // index ke-4, yg terakhir
+        console.info(source)
+    }
+
+    {
+        // Array Filter
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        console.info(numbers.filter(x => x % 2 === 1 ));
+        console.info(numbers.filter(x => x % 2 === 0 ));
+    }
+
+    {
+        // Array Transform
+        const names = ["Ahmad", "Ilham", "Habibi"];
+        const namesUpper = names.map(value => value.toUpperCase());
+        console.info(namesUpper);
+
+        const nameReduce = names.reduce((before, value) => before + ' ' + value);
+        console.info(nameReduce)
+
+        const nameReduceRight = names.reduceRight((before, value) => before + ' ' + value);
+        console.info(nameReduceRight)
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set</title>
+</head>
+<body>
+<script>
+    const set = new Set();
+
+    set.add("Ahmad")
+    set.add("Ilham")
+    set.add("Habibi")
+    set.add("Ahmad")    // tidak boleh sama, harus unik
+    set.add("Ilham")    // tidak boleh sama, harus unik
+
+
+    console.info(set)
+    set.forEach( i => console.info(i))
+</script>
+</body>
+</html>
