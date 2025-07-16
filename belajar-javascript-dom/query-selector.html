@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+</head>
+<body>
+    <p>This is text</p>
+
+    <ol>
+        <li>Satu</li>
+        <li id="menu2">Dua</li>
+    </ol>
+
+    <ul>
+        <li class="menuItem">1</li>
+        <li id="menu2">2</li>
+        <li class="menuItem">3</li>
+    </ul>
+
+    <script>
+        {
+            // Selector Universal
+            const element = document.querySelectorAll("*")
+            console.info(element);
+        }
+
+        {
+            // Type Selector
+            const element1 = document.querySelectorAll("li");
+            console.info(element1);
+        }
+
+        {
+            // Class Selector
+            const element2 = document.querySelectorAll(".menuItem");
+            console.info(element2);
+        }
+
+        {
+            // ID Selector
+            const element3 = document.querySelectorAll("#menu2");
+            console.info(element3);
+        }
+    </script>
+</body>
+</html>
